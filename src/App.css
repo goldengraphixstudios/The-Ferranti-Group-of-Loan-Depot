@@ -240,6 +240,7 @@
 .hero__visual {
   display: grid;
   place-items: center;
+  transform: translateX(-20px);
 }
 
 .hero__media {
