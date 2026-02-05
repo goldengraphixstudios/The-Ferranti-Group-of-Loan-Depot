@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
-import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom'
+import { HashRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom'
 import './App.css'
+
+const base = import.meta.env.BASE_URL
+const asset = (path) => `${base}${path}`
 
 const services = [
   {
@@ -72,85 +75,85 @@ const team = [
     name: 'Kenneth Ferranti',
     role: 'Branch Manager',
     nmls: '799937',
-    photo: '/assets/team/kenneth-ferranti.png',
+    photo: asset('assets/team/kenneth-ferranti.png'),
   },
   {
     name: 'Jeffrey Wilkish',
     role: 'Region Manager',
     nmls: '48034',
-    photo: '/assets/team/jeffrey-wilkish.png',
+    photo: asset('assets/team/jeffrey-wilkish.png'),
   },
   {
     name: 'Aaron Kloss',
     role: 'Loan Consultant',
     nmls: '121127',
-    photo: '/assets/team/aaron-kloss.jpg',
+    photo: asset('assets/team/aaron-kloss.jpg'),
   },
   {
     name: 'Antoanet Sialer',
     role: 'Loan Consultant',
     nmls: '312757',
-    photo: '/assets/team/antoanet-sialer.png',
+    photo: asset('assets/team/antoanet-sialer.png'),
   },
   {
     name: 'Carlos Rosa',
     role: 'Loan Consultant',
     nmls: '20735',
-    photo: '/assets/team/carlos-rosa.jpg',
+    photo: asset('assets/team/carlos-rosa.jpg'),
   },
   {
     name: 'Christopher Alfano',
     role: 'Sales Manager',
     nmls: '2097161',
-    photo: '/assets/team/christopher-alfano.png',
+    photo: asset('assets/team/christopher-alfano.png'),
   },
   {
     name: 'Daniela Gatti',
     role: 'Loan Consultant',
     nmls: '12202',
-    photo: '/assets/team/daniela-gatti.png',
+    photo: asset('assets/team/daniela-gatti.png'),
   },
   {
     name: 'James Procter',
     role: 'Sales Manager',
     nmls: '23362',
-    photo: '/assets/team/james-procter.png',
+    photo: asset('assets/team/james-procter.png'),
   },
   {
     name: 'Jasmine Vega',
     role: 'Loan Consultant',
     nmls: '2779005',
-    photo: '/assets/team/jasmine-vega.jpg',
+    photo: asset('assets/team/jasmine-vega.jpg'),
   },
   {
     name: 'Josh Woodard',
     role: 'Loan Consultant',
     nmls: '2069871',
-    photo: '/assets/team/josh-woodard.png',
+    photo: asset('assets/team/josh-woodard.png'),
   },
   {
     name: 'Justin Maroney',
     role: 'Loan Consultant',
     nmls: '1901645',
-    photo: '/assets/team/justin-maroney.png',
+    photo: asset('assets/team/justin-maroney.png'),
   },
   {
     name: 'Lora Fernandez',
     role: 'Loan Consultant',
     nmls: '704347',
-    photo: '/assets/team/lora-fernandez.jpg',
+    photo: asset('assets/team/lora-fernandez.jpg'),
   },
   {
     name: 'Nicholas Ferranti',
     role: 'Loan Consultant',
     nmls: '2060318',
-    photo: '/assets/team/nicholas-ferranti.png',
+    photo: asset('assets/team/nicholas-ferranti.png'),
   },
   {
     name: 'Ryan Ferranti',
     role: 'Loan Consultant',
     nmls: '2117593',
-    photo: '/assets/team/ryan-ferranti.jpg',
+    photo: asset('assets/team/ryan-ferranti.jpg'),
   },
 ]
 
@@ -164,19 +167,19 @@ const beltItems = [
 ]
 
 const heroImages = [
-  { src: '/assets/rl-housing-24.png', alt: 'Luxury home exterior' },
-  { src: '/assets/rl-housing-23.png', alt: 'Modern home entrance' },
-  { src: '/assets/rl-housing-3.png', alt: 'Clean interior space' },
+  { src: asset('assets/rl-housing-24.png'), alt: 'Luxury home exterior' },
+  { src: asset('assets/rl-housing-23.png'), alt: 'Modern home entrance' },
+  { src: asset('assets/rl-housing-3.png'), alt: 'Clean interior space' },
 ]
 
 const offerImage = {
-  src: '/assets/homepage-right.png',
+  src: asset('assets/homepage-right.png'),
   alt: 'The Ferranti Group homepage highlight',
 }
 
 const offerImages = [
   {
-    src: '/assets/rl-housing-3.png',
+    src: asset('assets/rl-housing-3.png'),
     alt: 'Receive up to $30K down payment assistance offer',
   },
 ]
@@ -197,7 +200,7 @@ function Layout({ children }) {
       <header className="nav">
         <div className="nav__brand">
           <img
-            src="/assets/logo-rect.png"
+            src={asset('assets/logo-rect.png')}
             alt="The Ferranti Group logo"
             className="nav__logo nav__logo--overlay"
           />
@@ -235,7 +238,7 @@ function Layout({ children }) {
 
       <footer className="footer">
         <div className="footer__brand">
-          <img src="/assets/logo-square.png" alt="The Ferranti Group monogram" />
+          <img src={asset('assets/logo-square.png')} alt="The Ferranti Group monogram" />
           <div>
             <p className="footer__title">The Ferranti Group</p>
             <p>Your success could be next. Let's write your story.</p>
@@ -489,7 +492,7 @@ function Home() {
             social media campaigns and first-time buyers.
           </p>
           <a
-            href="/assets/ferranti-group-first-time-homebuyer-guide-ri.pdf"
+            href={asset('assets/ferranti-group-first-time-homebuyer-guide-ri.pdf')}
             className="button button--primary"
           >
             Download the Free PDF
@@ -518,7 +521,7 @@ function Home() {
           </p>
           <div className="resources-hero__actions">
             <a
-              href="/assets/ferranti-group-first-time-homebuyer-guide-ri.pdf"
+              href={asset('assets/ferranti-group-first-time-homebuyer-guide-ri.pdf')}
               className="button button--primary"
             >
               Download the Free PDF
@@ -727,7 +730,7 @@ function ResourcesPage() {
           </p>
           <div className="resources-page__actions">
             <a
-              href="/assets/ferranti-group-first-time-homebuyer-guide-ri.pdf"
+              href={asset('assets/ferranti-group-first-time-homebuyer-guide-ri.pdf')}
               className="button button--primary"
             >
               Download the Free PDF
@@ -909,12 +912,12 @@ function AppRoutes() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Layout>
         <AppRoutes />
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
