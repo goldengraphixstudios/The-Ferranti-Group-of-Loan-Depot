@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="30" fill="#4A1475"/>
+  <circle cx="60" cy="60" r="40" fill="#1b1025" stroke="#C4F54D" stroke-width="4"/>
+  <text x="60" y="68" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="32" font-weight="700">FG</text>
+</svg>
