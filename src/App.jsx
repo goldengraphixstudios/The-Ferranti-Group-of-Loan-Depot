@@ -895,7 +895,7 @@ function AppRoutes() {
 
   return (
     <PageShell>
-      <div className="page-transition" key={location.pathname}>
+      <div className="page-transition" key={location.key}>
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesPage />} />
@@ -912,7 +912,7 @@ function AppRoutes() {
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <Layout>
         <AppRoutes />
