@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4A1475"/>
+      <stop offset="100%" stop-color="#1c1126"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="520" fill="url(#g)"/>
+  <rect x="60" y="70" width="680" height="380" rx="30" fill="#ffffff" opacity="0.08"/>
+  <path d="M120 360l130-120 110 90 130-150 170 180" fill="none" stroke="#C4F54D" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="120" cy="360" r="10" fill="#C4F54D"/>
+  <circle cx="250" cy="240" r="10" fill="#C4F54D"/>
+  <circle cx="360" cy="330" r="10" fill="#C4F54D"/>
+  <circle cx="490" cy="180" r="10" fill="#C4F54D"/>
+  <circle cx="660" cy="360" r="10" fill="#C4F54D"/>
+  <text x="120" y="150" fill="#ffffff" font-family="Arial" font-size="28" opacity="0.75">Premium Client Story</text>
+</svg>
